@@ -30,5 +30,25 @@
       "email": "nav@test.com",
       "password": "nav@123"
     }
+  ],
+  "restaurants":[
+    {
+      "id":1,
+      "name":"KFC",
+      "address":"sector 45,Noida ",
+      "contact":1231
+    },
+    {
+      "id": 2,
+      "name": "Burger King",
+      "address": "sector 9,Delhi ",
+      "contact": 987
+    },
+    {
+      "id": 3,
+      "name": "Dominos",
+      "address": "sector 25,Gurgaon ",
+      "contact": 9425
+    }
   ]
 }
