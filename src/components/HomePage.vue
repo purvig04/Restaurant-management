@@ -48,16 +48,17 @@ export default {
       let user = localStorage.getItem("user-info");
       this.name = JSON.parse(user).name;
 
-      if (!user) {
-        this.$router.push({ name: "SignUp" });
-      }
-
       let result = await axios.get("http://localhost:3000/restaurants");
       this.restaurants = result.data;
     },
   },
   mounted() {
-    this.loadData();
+    let user = localStorage.getItem("user-info");
+    if (!user) {
+      this.$router.push({ name: "SignUp" });
+    } else {
+      this.loadData();
+    }
   },
 };
 </script>
