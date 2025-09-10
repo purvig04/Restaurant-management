@@ -39,7 +39,7 @@ import axios from "axios";
          if(result.status==201){
           this.$router.push({name:'Home'})
          }
-        console.warn(this.restaurant)
+
       }
     },
     mounted(){

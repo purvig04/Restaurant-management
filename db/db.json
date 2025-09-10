@@ -29,6 +29,18 @@
       "name": "Navodita",
       "email": "nav@test.com",
       "password": "nav@123"
+    },
+    {
+      "id": "85ad",
+      "name": "Ishita",
+      "email": "ishita@test.com",
+      "password": "ishita@123"
+    },
+    {
+      "id": "2a09",
+      "name": "Rits",
+      "email": "rits@test.com",
+      "password": "rits@123"
     }
   ],
   "restaurants": [
@@ -39,15 +51,9 @@
       "id": "6835"
     },
     {
-      "id": "faa3",
-      "name": "KFC",
-      "address": "sector 45,Noida",
-      "contact": "1231"
-    },
-    {
       "name": "Burger King",
       "address": "GIDC, Delhi",
-      "contact": "234",
+      "contact": "2321",
       "id": "9119"
     },
     {

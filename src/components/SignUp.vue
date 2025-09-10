@@ -24,15 +24,15 @@ export default {
   },
   methods: {
     async signUp() {
-      console.log(this.name, this.email, this.password);
+      
       let result = await axios.post("http://localhost:3000/users", {
         name: this.name,
         email: this.email,
         password: this.password,
       });
-      console.warn(result);
+    
       if(result.status==201){
-        localStorage.setItem("user-info", JSON.stringify(result.data[0]));
+        localStorage.setItem("user-info", JSON.stringify(result.data));
         this.$router.push({ name: "Home" });
       }
 
