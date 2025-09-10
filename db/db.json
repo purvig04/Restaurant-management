@@ -31,24 +31,36 @@
       "password": "nav@123"
     }
   ],
-  "restaurants":[
+  "restaurants": [
     {
-      "id":1,
-      "name":"KFC",
-      "address":"sector 45,Noida ",
-      "contact":1231
+      "name": "HotPot",
+      "address": "Rohini,Delhi ",
+      "contact": "321",
+      "id": "6835"
     },
     {
-      "id": 2,
+      "id": "8961",
+      "name": "Pizza Olio",
+      "address": "CP, Delhi",
+      "contact": "9871"
+    },
+    {
+      "id": "faa3",
+      "name": "KFC",
+      "address": "sector 45,Noida",
+      "contact": "1231"
+    },
+    {
       "name": "Burger King",
-      "address": "sector 9,Delhi ",
-      "contact": 987
+      "address": "GIDC, Delhi",
+      "contact": "234",
+      "id": "9119"
     },
     {
-      "id": 3,
-      "name": "Dominos",
-      "address": "sector 25,Gurgaon ",
-      "contact": 9425
+      "id": "9abe",
+      "name": "Lapinoz",
+      "address": "Hauz Khas,Delhi",
+      "contact": "564"
     }
   ]
 }

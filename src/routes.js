@@ -23,12 +23,12 @@ const routes = [
   },
   {
     name: "AddRestro",
-    path: "/add-restro",
+    path: "/add",
     component: AddRestro,
   },
   {
     name: "UpdateRestro",
-    path: "/update-restro",
+    path: "/update/:id",
     component: UpdateRestro,
   },
 ];
