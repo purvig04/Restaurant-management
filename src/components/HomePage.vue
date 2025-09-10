@@ -7,14 +7,16 @@
       <th>Name</th>
       <th>Address</th>
       <th>Contact Info.</th>
-      <th>Actions</th>
+      <th>Update</th>
+      <th>Delete</th>
     </tr>
     <tr v-for="item in restaurants" :key="item">
       <td>{{ item.id }}</td>
       <td>{{ item.name }}</td>
       <td>{{ item.address }}</td>
       <td>{{ item.contact }}</td>
-      <td><router-link :to="'/update/'+item.id">Update</router-link></td>
+      <td><router-link :to="'/update/' + item.id">Update</router-link></td>
+      <td><button v-on:click="deleteRestro(item.id)">Delete</button></td>
     </tr>
   </table>
 </template>
@@ -33,32 +35,44 @@ export default {
   components: {
     HeaderComp,
   },
-  async mounted() {
-    let user = localStorage.getItem("user-info");
-    this.name = JSON.parse(user).name;
+  methods: {
+    async deleteRestro(id) {
+      let result = await axios.delete(
+        `http://localhost:3000/restaurants/${id}`
+      );
+      if (result.status == 200) {
+        this.loadData();
+      }
+    },
+    async loadData() {
+      let user = localStorage.getItem("user-info");
+      this.name = JSON.parse(user).name;
 
-    if (!user) {
-      this.$router.push({ name: "SignUp" });
-    }
+      if (!user) {
+        this.$router.push({ name: "SignUp" });
+      }
 
-    let result = await axios.get("http://localhost:3000/restaurants");
-    this.restaurants = result.data;
+      let result = await axios.get("http://localhost:3000/restaurants");
+      this.restaurants = result.data;
+    },
+  },
+  mounted() {
+    this.loadData();
   },
 };
 </script>
 
 <style>
-.restaurant-table  {
-    border: 1px solid black;
-    width: 80%;
-    height: 150px;
+.restaurant-table {
+  border: 1px solid black;
+  width: 80%;
+  height: 150px;
 }
 
 .restaurant-table th,
 .restaurant-table td {
   border: 1px solid #ccc;
   padding: 12px;
-
 }
 .restaurant-table th {
   background-color: #f4f4f4;
@@ -69,4 +83,10 @@ export default {
   background-color: #f9f9f9;
 }
 
+button {
+  border: 1px solid skyblue;
+  background: rgb(75, 191, 236);
+  color: #fff;
+  cursor: pointer;
+}
 </style>
