@@ -5,6 +5,30 @@
       "name": "Mana",
       "email": "mani123@gmail.com",
       "password": "mana@123"
+    },
+    {
+      "id": "5467",
+      "name": "purvi",
+      "email": "purvi@gmail.com",
+      "password": "purvi@123"
+    },
+    {
+      "id": "525b",
+      "name": "anu",
+      "email": "anu@gmail.com",
+      "password": "anu@123"
+    },
+    {
+      "id": "d0ad",
+      "name": "Prachi",
+      "email": "prachi@test.com",
+      "password": "prachi223"
+    },
+    {
+      "id": "11e1",
+      "name": "Navodita",
+      "email": "nav@test.com",
+      "password": "nav@123"
     }
   ]
 }
