@@ -2,6 +2,8 @@ import { createWebHistory, createRouter } from "vue-router";
 import SignUp from "./components/SignUp.vue";
 import HomePage from "./components/HomePage.vue";
 import LoginPage from "./components/LoginPage.vue";
+import AddRestro from "./components/AddRestro.vue";
+import UpdateRestro from "./components/UpdateRestro.vue";
 
 const routes = [
   {
@@ -18,6 +20,16 @@ const routes = [
     name: "Login",
     path: "/login",
     component: LoginPage,
+  },
+  {
+    name: "AddRestro",
+    path: "/add-restro",
+    component: AddRestro,
+  },
+  {
+    name: "UpdateRestro",
+    path: "/update-restro",
+    component: UpdateRestro,
   },
 ];
 
